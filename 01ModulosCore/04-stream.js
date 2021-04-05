@@ -14,8 +14,16 @@
 
 "use strick";
 
-var fs = requiere("fs"),
+var fs = require("fs"),
   readStream = fs.createReadStream("assets/nombres.txt"),
   writeStream = fs.createWriteStream("assets/nombres_copia.txt");
 
 readStream.pipe(writeStream);
+
+readStream
+  .on("data", function (chunks) {
+    console.log("He leido: " + chunks.length + " caracteres");
+  })
+  .on("end", function () {
+    console.log("Termine de leer el archivo");
+  });

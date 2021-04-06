@@ -12,11 +12,11 @@ function saveAge(age) {
 
   if (person.age < 18) {
     stdout.write(
-      person.name + " eres menor de edad, tienes " + person.age + " anios."
+      person.name + " eres menor de edad, tienes " + person.age + " años."
     );
   } else if (person.age >= 18) {
     stdout.write(
-      person.name + " eres mayor de edad, tienes " + person.age + " anios.\n"
+      person.name + " eres mayor de edad, tienes " + person.age + " años.\n"
     );
   }
 
@@ -25,7 +25,7 @@ function saveAge(age) {
 
 function saveName(name) {
   person.name = name;
-  var question = "Hola " + person.name + "Cuantos anios tienes?";
+  var question = "Hola " + person.name + "Cuantos años tienes?";
 
   quiz(question, saveAge);
 }
